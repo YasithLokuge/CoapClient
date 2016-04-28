@@ -14,8 +14,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>CoapClient</groupId>
-	<artifactId>CoapClient</artifactId>
+	<groupId>CoapServer</groupId>
+	<artifactId>CoapServer</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<build>
 		<sourceDirectory>src</sourceDirectory>
@@ -38,7 +38,7 @@
 						<manifest>
 							<addClasspath>true</addClasspath>
 							<classpathPrefix>lib/</classpathPrefix>
-							<mainClass>com.cobweb.io.coap.Server</mainClass>
+							<mainClass>com.coap.server.main</mainClass>
 						</manifest>
 					</archive>
 				</configuration>
@@ -60,7 +60,7 @@
 					<archive>
 						<manifest>
 							<addClasspath>true</addClasspath>
-							<mainClass>com.coap.client.main</mainClass>
+							<mainClass>com.coap.server.main</mainClass>
 						</manifest>
 					</archive>
 				</configuration>
@@ -70,7 +70,7 @@
 				<artifactId>exec-maven-plugin</artifactId>
 				<version>1.1</version>
 				<configuration>
-					<mainClass>com.coap.client.main</mainClass>
+					<mainClass>com.coap.server.main</mainClass>
 				</configuration>
 			</plugin>
 		</plugins>
